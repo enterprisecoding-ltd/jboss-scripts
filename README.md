@@ -1,6 +1,6 @@
 # JBoss / Wildfly Scripts
 
-Useful script to manage JBoss / Wildfly instances.
+Useful scripts to manage JBoss / Wildfly instances.
 
 Scripts are divided into following main groups;
 

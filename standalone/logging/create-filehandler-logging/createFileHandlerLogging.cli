@@ -1,0 +1,10 @@
+set fileHandlerName=${fileHandlerName}
+set loggerName=${loggerName}
+set logRelativePath=${logRelativePath}
+set logLevel=${logLevel}
+
+batch
+/subsystem=logging/file-handler=$fileHandlerName:add(level=$logLevel, file={"relative-to"=>"jboss.server.log.dir", "path"=>$logRelativePath}, append=false, autoflush=true)
+/subsystem=logging/logger=$loggerName:add(use-parent-handlers=false,handlers=[$fileHandlerName],level=$logLevel)
+
+run-batch

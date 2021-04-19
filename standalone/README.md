@@ -3,6 +3,7 @@
 This folder contains management scripts for JBoss / Wildfly Standalone mode.
 
 
-|          Script       |                 Description                      |
+|          Folder       |                 Description                      |
 |-----------------------|--------------------------------------------------|
-|  [Create DataSource](create-datasource)    | Parametrized script to create datasource         |
+|  [DataSource](datasource)    | Datasource related scripts        |
+|  [Logging](logging)    | Logging related scripts        |

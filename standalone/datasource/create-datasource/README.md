@@ -8,7 +8,7 @@ JBoss/Wildfly script to create datasource for standalone mode.
 |          File         |                 Description                      |
 |-----------------------|--------------------------------------------------|
 | createDataSource.cli  | Parametrized script to create datasource         |
-| mysql.properties      | Sample properties file for mysql datasource      |
+| mysql.properties      | Sample properties file for MySQL datasource      |
 | oracle-xe.properties  | Sample properties file for Oracle XE datasource  |
 | postgresql.properties | Sample properties file for PostgreSQL datasource |
 
