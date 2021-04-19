@@ -16,5 +16,7 @@ module add --name=$module --resources=$resource --dependencies=javax.api,javax.t
 
 data-source add --jndi-name=$jndiname --name=$name --connection-url=$jdbcUrl --driver-name=$driver --user-name=$username --password=$password
 
+/subsystem=datasources/data-source=$name:test-connection-in-pool()
+
 reload
 run-batch
