@@ -1,0 +1,6 @@
+set hostName=${hostName}
+set serverName=${serverName}
+set serverGroupName=${serverGroupName}
+set portOffset=${portOffset}
+
+/host=$hostName/server-config=$serverName:add(group=$serverGroupName, auto-start=true, socket-binding-port-offset=$portOffset)
