@@ -1,0 +1,5 @@
+set serverGroupName=${serverGroupName}
+set profileName=${profileName}
+set socketBindingGroup=${socketBindingGroup}
+
+/server-group=$serverGroupName:add(profile=$profileName,socket-binding-group=$socketBindingGroup)
