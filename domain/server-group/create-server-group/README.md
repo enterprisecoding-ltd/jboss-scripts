@@ -12,12 +12,11 @@ JBoss/Wildfly script to create fserve group for domain mode.
 
 # Parameters
 
-|     Parameter    |                 Description                      |
-|------------------|--------------------------------------------------|
-| fileHandlerName  | Name for newly declared file-handler             |
-| loggerName       | Category name of logger                          |
-| logRelativePath  | Log file path relative to "jboss.server.log.dir" |
-| logLevel         | Log level for file-handler and logger            |
+|      Parameter      |                 Description                   |
+|---------------------|-----------------------------------------------|
+| serverGroupName     | Name for newly declared server group          |
+| profileName         | Profile name to use with server group         |
+| socketBindingGroup  | Socket binding group to use with server group |
 
 ## Usage
 

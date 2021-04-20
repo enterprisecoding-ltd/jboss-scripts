@@ -4,4 +4,4 @@ This folder contains management scripts for JBoss / Wildfly Domain mode.
 
 |          Folder       |                 Description                      |
 |-----------------------|--------------------------------------------------|
-|  [Server Group](servergroup)    | Server Group related scripts        |
+|  [Server Group](server-group)    | Server Group related scripts        |
