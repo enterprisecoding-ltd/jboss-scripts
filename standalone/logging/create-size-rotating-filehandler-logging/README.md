@@ -1,6 +1,6 @@
 # Create Size-Rotating File-Handler Logging Script
 
-JBoss/Wildfly script to create seiz-rotating file-handler logging for standalone mode.
+JBoss/Wildfly script to create size-rotating file-handler logging for standalone mode.
 
 
 # Files

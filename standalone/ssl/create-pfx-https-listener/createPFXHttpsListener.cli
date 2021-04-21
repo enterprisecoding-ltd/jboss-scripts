@@ -1,0 +1,21 @@
+set realmName=${realmName}
+set pfxPath=${pfxPath}
+set pfxPassword=${pfxPassword}
+
+if (outcome != success) of /subsystem=undertow/server=default-server/https-listener=https:read-resource
+    batch
+        /core-service=management/security-realm=$realmName:add()
+        /core-service=management/security-realm=$realmName/server-identity=ssl:add(keystore-path=$pfxPath, keystore-relative-to=jboss.server.config.dir,keystore-password=$pfxPassword)
+        /subsystem=undertow/server=default-server/https-listener=https:add(socket-binding=https, security-realm=$realmName)
+
+        reload
+    run-batch
+else
+    batch
+        /core-service=management/security-realm=$realmName:add()
+        /core-service=management/security-realm=$realmName/server-identity=ssl:add(keystore-path=$pfxPath, keystore-relative-to=jboss.server.config.dir,keystore-password=$pfxPassword)
+        /subsystem=undertow/server=default-server/https-listener=https:write-attribute(name=security-realm, value=$realmName)
+
+        reload
+    run-batch
+end-if
