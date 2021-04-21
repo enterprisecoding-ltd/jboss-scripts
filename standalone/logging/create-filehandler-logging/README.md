@@ -5,11 +5,19 @@ JBoss/Wildfly script to create file-handler logging for standalone mode.
 
 # Files
 
-|          File         |                 Description                      |
-|-----------------------|--------------------------------------------------|
-| createFileHandlerLogging.cli  | Parametrized script to create file-handler logging         |
+|              File              |                    Description                           |
+|--------------------------------|----------------------------------------------------------|
+| createFileHandlerLogging.cli   | Parametrized script to create file-handler logging       |
 | enterprisecoding-fh.properties | Sample properties file for Enterprisecoding file-handler |
 
+# Parameters
+
+|     Parameter    |                 Description                      |
+|------------------|--------------------------------------------------|
+| fileHandlerName  | Name for newly declared file-handler             |
+| loggerName       | Category name of logger                          |
+| logRelativePath  | Log file path relative to "jboss.server.log.dir" |
+| logLevel         | Log level for file-handler and logger            |
 
 ## Usage
 

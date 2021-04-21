@@ -1,0 +1,18 @@
+set srFileHandlerName=${srFileHandlerName}
+set loggerName=${loggerName}
+set logRelativePath=${logRelativePath}
+set logLevel=${logLevel}
+set rotateSize=${rotateSize}
+set maxBackupIndex=${maxBackupIndex}
+
+if (outcome != success) of /subsystem=logging/logger=$loggerName:read-resource
+    batch
+        /subsystem=logging/size-rotating-file-handler=$srFileHandlerName:add(level=$logLevel, file={"relative-to"=>"jboss.server.log.dir", "path"=>$logRelativePath}, append=false, autoflush=true, rotate-size=$rotateSize, max-backup-index=$maxBackupIndex)
+        /subsystem=logging/logger=$loggerName:add(use-parent-handlers=false,handlers=[$srFileHandlerName],level=$logLevel)
+    run-batch
+else
+    batch
+        /subsystem=logging/size-rotating-file-handler=$srFileHandlerName:add(level=$logLevel, file={"relative-to"=>"jboss.server.log.dir", "path"=>$logRelativePath}, append=false, autoflush=true, rotate-size=$rotateSize, max-backup-index=$maxBackupIndex)
+        /subsystem=logging/logger=$loggerName:add-handler(name=$srFileHandlerName)
+    run-batch
+end-if
