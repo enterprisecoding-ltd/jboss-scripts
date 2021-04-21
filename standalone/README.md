@@ -7,3 +7,4 @@ This folder contains management scripts for JBoss / Wildfly Standalone mode.
 |-----------------------|--------------------------------------------------|
 |  [DataSource](datasource)    | Datasource related scripts        |
 |  [Logging](logging)    | Logging related scripts        |
+|  [SSL](ssl)    | SSL related scripts        |
