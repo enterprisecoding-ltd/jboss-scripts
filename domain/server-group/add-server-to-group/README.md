@@ -12,11 +12,13 @@ JBoss/Wildfly script to create fserve group for domain mode.
 
 # Parameters
 
-|      Parameter      |                 Description                   |
-|---------------------|-----------------------------------------------|
-| serverGroupName     | Name for newly declared server group          |
-| profileName         | Profile name to use with server group         |
-| socketBindingGroup  | Socket binding group to use with server group |
+
+|      Parameter      |       Description                |
+|---------------------|----------------------------------|
+| hostName            | Hostname to add server           |
+| serverName          | Server name                      |
+| serverGroupName     | Server group name to add server  |
+| portOffset          | Port offset used for the server  |
 
 ## Usage
 
