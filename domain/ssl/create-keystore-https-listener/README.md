@@ -20,6 +20,7 @@ JBoss/Wildfly script to create https listener for standalone mode.
 | keyPassword      | Key password                  |
 | alias            | Certificate alias             |
 | profile          | profile to add https-listener |
+| server           | server to add https-listener  |
 
 ## Usage
 
