@@ -1,0 +1,9 @@
+set securityDomain=${securityDomain}
+set code=${code}
+set username=${username}
+set password=${password}
+
+batch
+/subsystem=security/security-domain=$securityDomain/:add(cache-type=default)
+/subsystem=security/security-domain=$securityDomain/authentication=classic:add(login-modules=[ { "code"=>"$code", "flag"=>"required", "module-options"=>[ ("username"=>"$username"), ("password"=>"$password") ] }])
+run-batch
